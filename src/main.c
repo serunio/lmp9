@@ -3,10 +3,11 @@
 #include "mat_io.h"
 #include <stdlib.h>
 #include <stdio.h>
+#include "zamiana.h"
 
 
 int main(int argc, char ** argv) {
-	int res;
+	int res=0;
 	Matrix * A = readFromFile(argv[1]);
 	Matrix * b = readFromFile(argv[2]);
 	Matrix * x;
@@ -18,6 +19,10 @@ int main(int argc, char ** argv) {
 
 	res = eliminate(A,b);
 	x = createMatrix(b->r, 1);
+	if(res==0);
+	//zamiana(A,b,0);
+	printToScreen(A);
+	printToScreen(b);
 	if (x != NULL) {
 		res = backsubst(x,A,b);
 
