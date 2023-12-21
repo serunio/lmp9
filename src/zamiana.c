@@ -9,7 +9,7 @@ int zamiana(Matrix* A, Matrix* b, int column)
     int i;
     double max = 0;
     double tempb;
-    for(int j = 0; j < A->r; j++)
+    for(int j = column; j < A->r; j++)
     {
         if(fabs(A->data[j][column]) > max)
         {
