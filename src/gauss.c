@@ -22,7 +22,7 @@ int eliminate(Matrix *mat, Matrix *b) {
         int x = 0;
         wspolczynnik = malloc(sizeof(double) * (mat->r - 1 - i));
         for (j = i + 1; j < mat->r; j++) {
-            zamiana(mat, b, i);
+
             wspolczynnik[x] = (mat->data[j][i]) / (mat->data[i][i]);
             if (wspolczynnik[x] == 0)
                 return 1;
