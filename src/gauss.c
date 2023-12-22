@@ -1,6 +1,7 @@
 #include "gauss.h"
 #include <stdlib.h>
 #include <stdio.h>
+#include "zamiana.h"
 
 /**
  * Zwraca 0 - elimnacja zakonczona sukcesem

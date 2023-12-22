@@ -21,8 +21,8 @@ int zamiana(Matrix* A, Matrix* b, int column)
     }
     A->data[i] = A->data[0];
     b->data[i][0] = b->data[0][0];
-    A->data[0] = tempA;
-    b->data[0][0] = tempb;
+    A->data[column] = tempA;
+    b->data[column][0] = tempb;
 
     return 0;
 }
