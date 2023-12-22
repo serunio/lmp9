@@ -6,9 +6,9 @@
 int zamiana(Matrix* A, Matrix* b, int column)
 {
     double* tempA = malloc(A->c * sizeof(double));
-    int i=column;
+    int i = column;
     int j;
-    double max = fabs(A->data[column][column]);
+    double max = 0;
     double tempb;
     for(j = column; j < A->r; j++)
     {
