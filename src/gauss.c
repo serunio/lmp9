@@ -30,7 +30,6 @@ int eliminate(Matrix *mat, Matrix *b) {
 
             for (l = i; l < mat->c; l++) {
                 mat->data[j][l] = (mat->data[j][l]) - (mat->data[i][l] * wspolczynnik[x]);
-                //printf("mat data od j od l %f\n", mat->data[j][l]);
             }
             b->data[j][0] = (b->data[j][0]) - (b->data[0][0] * wspolczynnik[x]);
             x++;
