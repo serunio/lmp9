@@ -20,7 +20,7 @@ int eliminate(Matrix *mat, Matrix *b){
 	       {
 		       int x=0;
 		       wspolczynnik = malloc(sizeof (double) * (mat->r-1-i));
-//		       zamiana(mat,b,i);
+		       zamiana(mat,b,i);
 		       for( j = i+1;j<mat->r;j++)
 		       {
 			      

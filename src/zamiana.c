@@ -6,12 +6,13 @@
 int zamiana(Matrix* A, Matrix* b, int column)
 {
     double* tempA = malloc(A->c * sizeof(double));
-    int i;
-    double max = 0;
+    int i=column;
+    int j;
+    double max = fabs(A->data[column][column]);
     double tempb;
-    for(int j = column; j < A->r; j++)
+    for(j = column; j < A->r; j++)
     {
-        if(fabs(A->data[j][column]) > max)
+        if(fabs(A->data[j][column]) >= max)
         {
             max = fabs(A->data[j][column]);
             tempA = A->data[j];

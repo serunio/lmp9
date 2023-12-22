@@ -20,9 +20,7 @@ int main(int argc, char ** argv) {
 	res = eliminate(A,b);
 	x = createMatrix(b->r, 1);
 	if(res==0);
-	//zamiana(A,b,0);
-	printToScreen(A);
-	printToScreen(b);
+	zamiana(A,b,0);
 	if (x != NULL) {
 		res = backsubst(x,A,b);
 
